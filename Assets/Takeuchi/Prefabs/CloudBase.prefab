@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 709222519}
   m_Layer: 4
   m_Name: CloudBase
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -84,6 +84,7 @@ MonoBehaviour:
   _rainCount: 10
   _rainSpan: 0.1
   _rainPrefab: {fileID: 2564215753907483747, guid: 0937d0f3f8b05c04bab2a30e51619326, type: 3}
+  _rainParticleSystem: {fileID: 0}
 --- !u!50 &709222520
 Rigidbody2D:
   serializedVersion: 4
@@ -141,7 +142,9 @@ MonoBehaviour:
   - {fileID: 6565421248616548411}
   _startSize: 0.5
   _rainCreate: {fileID: 1224824572343764957}
-  _rainCount: 10
+  _rainCount: 20
+  _thundercloud: {fileID: 0}
+  _thundercloudTime: 3
 --- !u!1 &1224824572625600644
 GameObject:
   m_ObjectHideFlags: 0
@@ -223,6 +226,18 @@ PrefabInstance:
       value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 5468069935142164700, guid: a67a920b5d47dbe4ca79e4cbe45fb4bf, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468069935142164700, guid: a67a920b5d47dbe4ca79e4cbe45fb4bf, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468069935142164700, guid: a67a920b5d47dbe4ca79e4cbe45fb4bf, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468069935142164700, guid: a67a920b5d47dbe4ca79e4cbe45fb4bf, type: 3}
       propertyPath: InitialModule.startColor.minColor.a
       value: 0.60784316
       objectReference: {fileID: 0}
@@ -297,6 +312,22 @@ PrefabInstance:
     - target: {fileID: 5468069937072000813, guid: a67a920b5d47dbe4ca79e4cbe45fb4bf, type: 3}
       propertyPath: InitialModule.startLifetime.scalar
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468069937072000813, guid: a67a920b5d47dbe4ca79e4cbe45fb4bf, type: 3}
+      propertyPath: InitialModule.startColor.minColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468069937072000813, guid: a67a920b5d47dbe4ca79e4cbe45fb4bf, type: 3}
+      propertyPath: InitialModule.startColor.minColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468069937072000813, guid: a67a920b5d47dbe4ca79e4cbe45fb4bf, type: 3}
+      propertyPath: InitialModule.startColor.minColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468069937072000813, guid: a67a920b5d47dbe4ca79e4cbe45fb4bf, type: 3}
+      propertyPath: InitialModule.startColor.minMaxState
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a67a920b5d47dbe4ca79e4cbe45fb4bf, type: 3}
