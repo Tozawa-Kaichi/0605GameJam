@@ -134,17 +134,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5bd46bd104098945b37881ed2667556, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _moveSpeed: 8
+  _moveSpeed: 2
   _rigidbody: {fileID: 709222520}
   _cloudBodys:
   - {fileID: 373907758160806758}
   - {fileID: 6565421249371594696}
   - {fileID: 6565421248616548411}
-  _startSize: 0.5
+  _startSize: 0.1
   _rainCreate: {fileID: 1224824572343764957}
   _rainCount: 20
   _thundercloud: {fileID: 0}
   _thundercloudTime: 3
+  _maxSize: 2
+  _maxSpeed: 8
 --- !u!1 &1224824572625600644
 GameObject:
   m_ObjectHideFlags: 0
@@ -185,9 +187,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 373907758160806758}
-  m_Layer: 4
+  - component: {fileID: 232018895}
+  - component: {fileID: 232018896}
+  m_Layer: 0
   m_Name: CloudBody
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -210,6 +214,35 @@ Transform:
   m_Father: {fileID: 1224824572343764956}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!70 &232018895
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8189253653516084821}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 4, y: 2}
+  m_Direction: 1
+--- !u!114 &232018896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8189253653516084821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 419a878251d3c274eb1bef49bcc4e41e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _cloudController: {fileID: 709222519}
 --- !u!1001 &1224824573551970069
 PrefabInstance:
   m_ObjectHideFlags: 0
