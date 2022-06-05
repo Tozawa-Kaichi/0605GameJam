@@ -64,8 +64,12 @@ public class RainCreate : MonoBehaviour
             return instanceRain;
         }
         var rain = Instantiate(_rainPrefab);
-        rain.gameObject.SetActive(false);
-        _rains.Add(rain);
+        rain.transform.SetParent(transform);
+        rain.SetActive(false);
         return rain;
+    }
+    public void ChangeRainCount(int count)
+    {
+        _rainCount = count;
     }
 }

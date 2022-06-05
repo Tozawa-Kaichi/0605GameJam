@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2564215753907483746}
   - component: {fileID: 6928550414683943199}
   - component: {fileID: -6610164464523814286}
+  - component: {fileID: 1824386550947150172}
   m_Layer: 0
   m_Name: Rain
   m_TagString: Untagged
@@ -224,8 +225,8 @@ ParticleSystem:
     startColor:
       serializedVersion: 2
       minMaxState: 0
-      minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.30566037, g: 0.93347436, b: 1, a: 1}
+      minColor: {r: 0.7490566, g: 0.9781431, b: 1, a: 1}
+      maxColor: {r: 0.57924527, g: 0.7208603, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -4834,7 +4835,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &-6610164464523814286
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4847,5 +4848,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d8327f48611d074ca19327425962c45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _hydeLevel: -8
+  _hydeLevel: -5
   _rigidbody: {fileID: 6928550414683943199}
+--- !u!70 &1824386550947150172
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2564215753907483747}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: 77bc07bdff2a2a44e8e0d0a4ed303bd5, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.1}
+  m_Size: {x: 0.1, y: 0.2}
+  m_Direction: 0
