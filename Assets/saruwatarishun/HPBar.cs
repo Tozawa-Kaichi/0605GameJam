@@ -9,7 +9,7 @@ public class HPBar : MonoBehaviour
     Slider slider = null;
     [SerializeField]
     private int maxWater;
-    int currentHp;
+    public int currentHp;
     [SerializeField]
     int water = 1;
 
