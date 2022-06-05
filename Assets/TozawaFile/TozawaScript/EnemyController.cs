@@ -28,7 +28,7 @@ public class EnemyController : MonoBehaviour
         if(collision.gameObject.tag == "Rain")//もし当たったオブジェクトのタグがRainだったら
         {
             _enemyHealthPoint -= _rainDamage;//既定のダメージ分体力から減らす
-            Destroy(collision.gameObject); //当たった雨を消滅させる
+            collision.gameObject.SetActive(false); //当たった雨を消滅させる
         }
         
     }

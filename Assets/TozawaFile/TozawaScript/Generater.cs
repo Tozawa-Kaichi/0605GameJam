@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Generater : MonoBehaviour
 {
-    [SerializeField] GameObject _spawnPrefab;// スポーンさせる対象
+    [SerializeField] GameObject [] _spawnPrefabs;// スポーンさせる対象
     [SerializeField] Transform [] _transformArray; // スポーン場所の配列
     [SerializeField] float _spawnInterval = 8f;// 初期インターバル
     [SerializeField] float _getFasterIntervalValue = 1f;// インターバルを短くする値
@@ -26,15 +26,16 @@ public class Generater : MonoBehaviour
     void RandomGenerate()
     {
         
-        int random = Random.Range(0, _transformArray.Length); //配列の中からランダム
-        
+        int randomT = Random.Range(0, _transformArray.Length); //配列の中からランダム
+        int randomE = Random.Range(0, _spawnPrefabs.Length); //配列の中からランダム
         _time += Time.deltaTime; //タイマー
         if (_time >= _spawnInterval) // 
         {
             _time = 0;
             _count++;
-            Instantiate(_spawnPrefab, _transformArray[random]); // ランダムな配列内の場所に生成
-            Debug.Log("SpawnSomethingAt"+random);
+            var x  = Instantiate(_spawnPrefabs[randomE], _transformArray[randomT]); // ランダムな配列内の場所に生成
+            x.transform.position = _transformArray[randomT].position;
+            Debug.Log("SpawnSomethingAt"+randomT);
             if (_spawnInterval > _minIntervalTime && _count > _spawnCount) //インターバルが最小値じゃない 且つ 既定の回数スポーンさせたら
             {
                 _spawnInterval -= _getFasterIntervalValue; // 既定の値で間隔を短くする
