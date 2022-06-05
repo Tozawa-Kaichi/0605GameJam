@@ -20,9 +20,14 @@ public class CloudController : MonoBehaviour
     private RainCreate _thundercloud = default;
     [SerializeField]
     private float _thundercloudTime = 3f;
+    [SerializeField]
+    private float _maxSize = 2f;
+    [SerializeField]
+    private float _maxSpeed = 12f;
     private float _thundercloudTimer = 0f;
     private bool _isThundercloudRaining = false;
     private float _currentSize = 1f;
+    private float _currentSpeed = default;
     private Vector2 _moveDir = Vector2.zero;
     private void Start()
     {
@@ -39,7 +44,12 @@ public class CloudController : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        _rigidbody.velocity = _moveDir.normalized * _moveSpeed;
+        _currentSpeed = _moveSpeed / _currentSize;
+        if (_currentSpeed > _maxSpeed)
+        {
+            _currentSpeed = _maxSpeed;
+        }
+        _rigidbody.velocity = _moveDir.normalized * _currentSpeed;
     }
     private void ChangeSize()
     {
@@ -71,6 +81,10 @@ public class CloudController : MonoBehaviour
     public void AddSize(float size)
     {
         _currentSize += size;
+        if (_currentSize > _maxSize)
+        {
+            _currentSize = _maxSize;
+        }
         ChangeSize();
     }
 }

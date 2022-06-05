@@ -8,7 +8,7 @@ public class ThunderItem : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            CloudController cloud = collision.GetComponent<CloudController>();
+            CloudContact cloud = collision.GetComponent<CloudContact>();
             if (cloud != null)
             {
                 cloud.StartThundercloud();
