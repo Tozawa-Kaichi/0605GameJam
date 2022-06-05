@@ -511,7 +511,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1276228255
 Transform:
   m_ObjectHideFlags: 0
@@ -751,22 +751,6 @@ PrefabInstance:
     - target: {fileID: 669031156074255540, guid: 4e0bcf870bc91f5408c4677e6401d5af, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1970954406101607284, guid: 4e0bcf870bc91f5408c4677e6401d5af, type: 3}
-      propertyPath: _deathDelay
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1970954406101607284, guid: 4e0bcf870bc91f5408c4677e6401d5af, type: 3}
-      propertyPath: _rainDamage
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 1970954406101607284, guid: 4e0bcf870bc91f5408c4677e6401d5af, type: 3}
-      propertyPath: _enemyHealthPoint
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1970954406101607287, guid: 4e0bcf870bc91f5408c4677e6401d5af, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5721426479058143704, guid: 4e0bcf870bc91f5408c4677e6401d5af, type: 3}
       propertyPath: m_Name
