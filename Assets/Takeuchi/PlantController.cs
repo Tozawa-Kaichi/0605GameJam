@@ -17,8 +17,10 @@ public class PlantController : MonoBehaviour
     [SerializeField]
     private ParticleSystem _plantSystem = null;
     private int _currentSize = 0;
+    private bool _isActive = false;
     private void Update()
     {
+        if (!_isActive) { return; }
         if (_currentSize > 0 && _plantTransform.localPosition != Vector3.up * _upPos[_currentSize - 1])
         {
             _plantTransform.localPosition = Vector3.Lerp(_plantTransform.localPosition, Vector3.up * _upPos[_currentSize - 1], Time.deltaTime);
@@ -37,5 +39,14 @@ public class PlantController : MonoBehaviour
                 return;
             }
         }
+    }
+    public void StartControl()
+    {
+        _isActive = true;
+        _currentSize = 0;
+    }
+    public void StopControl()
+    {
+        _isActive = false;
     }
 }
