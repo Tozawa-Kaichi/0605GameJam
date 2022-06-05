@@ -4825,6 +4825,8 @@ GameObject:
   - component: {fileID: 4416232740461651034}
   - component: {fileID: 4416232740461651039}
   - component: {fileID: 4416232740461651033}
+  - component: {fileID: -5643766181349802325}
+  - component: {fileID: -2317981672110338417}
   m_Layer: 4
   m_Name: AddSizeItem
   m_TagString: Untagged
@@ -9656,3 +9658,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _addSize: 0.1
+--- !u!114 &-5643766181349802325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4416232740461651035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6745fe69a42464649820e2a9fa118532, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 0.33
+--- !u!50 &-2317981672110338417
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4416232740461651035}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
