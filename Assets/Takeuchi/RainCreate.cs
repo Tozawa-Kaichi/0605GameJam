@@ -15,14 +15,18 @@ public class RainCreate : MonoBehaviour
     private float _rainSpan = 0.1f;
     [SerializeField]
     private GameObject _rainPrefab = null;
+    [SerializeField]
+    private ParticleSystem _rainParticleSystem = null;
     private float _rainTimer = 0;
     private List<GameObject> _rains = default;
+    private bool _isRaining = false;
     private void Start()
     {
         CreateRain();
     }
     private void Update()
     {
+        if (!_isRaining) { return; }
         _rainTimer += Time.deltaTime;
         if (_rainTimer > _rainSpan)
         {
@@ -46,7 +50,7 @@ public class RainCreate : MonoBehaviour
         for (int i = 0; i < _rainCount; i++)
         {
             var rain = GetRain();
-            var rainLine = Random.Range(_leftRainRine.position.x,_rightRainRine.position.x);
+            var rainLine = Random.Range(_leftRainRine.position.x, _rightRainRine.position.x);
             var rainPos = transform.position;
             rainPos.x = rainLine;
             rain.transform.position = rainPos;
@@ -67,6 +71,22 @@ public class RainCreate : MonoBehaviour
         rain.transform.SetParent(transform);
         rain.SetActive(false);
         return rain;
+    }
+    public void StartRain()
+    {
+        _isRaining = true;
+        if (_rainParticleSystem)
+        {
+            _rainParticleSystem.Play();
+        }
+    }
+    public void StopRain()
+    {
+        _isRaining = false; 
+        if (_rainParticleSystem)
+        {
+            _rainParticleSystem.Stop();
+        }
     }
     public void ChangeRainCount(int count)
     {

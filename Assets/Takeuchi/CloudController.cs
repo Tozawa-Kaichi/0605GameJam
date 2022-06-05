@@ -16,12 +16,19 @@ public class CloudController : MonoBehaviour
     private RainCreate _rainCreate = default;
     [SerializeField]
     private int _rainCount = 10;
+    [SerializeField]
+    private RainCreate _thundercloud = default;
+    [SerializeField]
+    private float _thundercloudTime = 3f;
+    private float _thundercloudTimer = 0f;
+    private bool _isThundercloudRaining = false;
     private float _currentSize = 1f;
     private Vector2 _moveDir = Vector2.zero;
     private void Start()
     {
         _currentSize = _startSize;
         ChangeSize();
+        _rainCreate.StartRain();
     }
     private void Update()
     {
@@ -41,6 +48,25 @@ public class CloudController : MonoBehaviour
             cloudBody.localScale = Vector3.one * _currentSize;
         }
         _rainCreate.ChangeRainCount((int)(_rainCount * _currentSize));
+    }
+    private IEnumerator ThundercloudRain()
+    {
+        while (_thundercloudTimer < _thundercloudTime)
+        {
+            _thundercloudTimer += Time.deltaTime;
+            yield return null;
+        }
+        _thundercloud.StopRain();
+        _isThundercloudRaining = false;
+    }
+    public void StartThundercloud()
+    {
+        _thundercloudTimer = 0f;
+        _thundercloud.StartRain();
+        if (!_isThundercloudRaining)
+        {
+            StartCoroutine(ThundercloudRain());
+        }
     }
     public void AddSize(float size)
     {

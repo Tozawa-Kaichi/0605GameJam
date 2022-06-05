@@ -4,10 +4,10 @@ using UnityEngine;
 [RequireComponent(typeof(CapsuleCollider2D))]
 public class EnemyController : MonoBehaviour
 {
-    [SerializeField] int _enemyHealthPoint = 100;
-    [SerializeField] int _rainDamage = 5;
-    [SerializeField] float _deathDelay = 2f;
-    ParticleSystem _fireParticle = default;
+    [SerializeField] public int _enemyHealthPoint = 100; //炎の体力
+    [SerializeField] int _rainDamage = 5; // 雨の火力
+    [SerializeField] public float _deathDelay = 2f; //火が消えるまでの余韻
+    ParticleSystem _fireParticle = default; //炎のパーティクル
     // Start is called before the first frame update
     void Start()
     {
@@ -17,23 +17,25 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(_enemyHealthPoint <= 0)
+        UpdateSet();
+        if (_enemyHealthPoint <= 0)//体力が０以下になったら
         {
-            Extinguished();
+            Extinguished();//鎮火という意味の英単語
         }
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)//コライダーのIsTriggerがチェック入ってないと機能しないよ
     {
-        if(collision.gameObject.tag == "Rain")
+        if(collision.gameObject.tag == "Rain")//もし当たったオブジェクトのタグがRainだったら
         {
-            _enemyHealthPoint -= _rainDamage;
-            Destroy(collision.gameObject);
+            _enemyHealthPoint -= _rainDamage;//既定のダメージ分体力から減らす
+            Destroy(collision.gameObject); //当たった雨を消滅させる
         }
         
     }
-    void Extinguished()//消化されたときの処理
+    protected virtual void UpdateSet() { }//ヴァーチャルメソッド
+    public void Extinguished()//消化(体力が０)されたときの処理
     {
-        _fireParticle.Stop();
-        Destroy(this.gameObject,_deathDelay);
+        _fireParticle.Stop();//パーティクルを停止する
+        Destroy(gameObject,_deathDelay);//余韻を残して消滅
     }
 }
