@@ -131,8 +131,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 709222519, guid: 4e31b70956771fb4bba488903c513b17, type: 3}
+      propertyPath: _maxSpeed
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 709222519, guid: 4e31b70956771fb4bba488903c513b17, type: 3}
+      propertyPath: _moveSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 709222519, guid: 4e31b70956771fb4bba488903c513b17, type: 3}
       propertyPath: _rainCount
-      value: 10
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 709222519, guid: 4e31b70956771fb4bba488903c513b17, type: 3}
       propertyPath: _thundercloud
@@ -1054,6 +1062,22 @@ PrefabInstance:
       propertyPath: slider
       value: 
       objectReference: {fileID: 222771800}
+    - target: {fileID: 8343140662157953421, guid: 6260e42787378f94aa6dc93c48901072, type: 3}
+      propertyPath: maxWater
+      value: 800
+      objectReference: {fileID: 0}
+    - target: {fileID: 8343140662157953422, guid: 6260e42787378f94aa6dc93c48901072, type: 3}
+      propertyPath: _sizeChangePoints.Array.data[10]
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 8343140662157953422, guid: 6260e42787378f94aa6dc93c48901072, type: 3}
+      propertyPath: _sizeChangePoints.Array.data[11]
+      value: 600
+      objectReference: {fileID: 0}
+    - target: {fileID: 8343140662157953422, guid: 6260e42787378f94aa6dc93c48901072, type: 3}
+      propertyPath: _sizeChangePoints.Array.data[12]
+      value: 790
+      objectReference: {fileID: 0}
     - target: {fileID: 8343140662220838186, guid: 6260e42787378f94aa6dc93c48901072, type: 3}
       propertyPath: m_Name
       value: Plant (1)
@@ -1187,6 +1211,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 234661736352305881, guid: 7383c8c1289a2ba4697e79ea025a21a8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3
+      objectReference: {fileID: 0}
     - target: {fileID: 234661736406635474, guid: 7383c8c1289a2ba4697e79ea025a21a8, type: 3}
       propertyPath: m_Name
       value: EnemyGenerator
@@ -1275,6 +1303,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 234661737371879502, guid: 7383c8c1289a2ba4697e79ea025a21a8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7383c8c1289a2ba4697e79ea025a21a8, type: 3}
 --- !u!1001 &1257186063646337938
@@ -1298,7 +1330,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1257186062859052294, guid: 56224d25f414f0340b25aeffe62b5745, type: 3}
       propertyPath: _spawnInterval
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1257186062859052294, guid: 56224d25f414f0340b25aeffe62b5745, type: 3}
       propertyPath: _spawnPrefabs.Array.size
