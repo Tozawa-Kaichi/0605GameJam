@@ -31,6 +31,7 @@ public class GameManager : MonoBehaviour
             FireCheck.dead = false;
             GameOver();
         }
+
     }
 
     void CursorCheck()// マウスを消す
@@ -51,7 +52,9 @@ public class GameManager : MonoBehaviour
     }
     public void GameClear()// 成功時呼ばれる 条件 花接触
     {
+        
         _score = hpbar.currentHp;//どれだけ花をのばしたか
+        Debug.Log(_score);
         StartCoroutine(WaitAnimation(_score));//をスコアにする
     }
     

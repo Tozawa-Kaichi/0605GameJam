@@ -14,7 +14,7 @@ public class ClearFlower : MonoBehaviour
         {
             if (GameManager.Instance != null)
             {
-                GameManager.Instance.GameOver();
+                GameManager.Instance.GameClear();
             }
             else
             {

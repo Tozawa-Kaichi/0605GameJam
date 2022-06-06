@@ -891,6 +891,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7523794834490052514, guid: 8fc6e0a09b1823a4c926f49eceb5bd7c, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7523794834490052514, guid: 8fc6e0a09b1823a4c926f49eceb5bd7c, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7523794834490052514, guid: 8fc6e0a09b1823a4c926f49eceb5bd7c, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7523794834490052514, guid: 8fc6e0a09b1823a4c926f49eceb5bd7c, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7523794834490052514, guid: 8fc6e0a09b1823a4c926f49eceb5bd7c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 223.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7523794834490052514, guid: 8fc6e0a09b1823a4c926f49eceb5bd7c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -26.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7523794834490052515, guid: 8fc6e0a09b1823a4c926f49eceb5bd7c, type: 3}
+      propertyPath: m_Text
+      value: "\u5341\u5B57\u30AD\u30FC/\u79FB\u52D5\n\u30B9\u30DA\u30FC\u30B9\u30AD\u30FC/\u96C6\u4E2D\u8C6A\u96E8"
+      objectReference: {fileID: 0}
     - target: {fileID: 7523794834490052515, guid: 8fc6e0a09b1823a4c926f49eceb5bd7c, type: 3}
       propertyPath: m_Color.b
       value: 0
@@ -902,6 +930,14 @@ PrefabInstance:
     - target: {fileID: 7523794834490052515, guid: 8fc6e0a09b1823a4c926f49eceb5bd7c, type: 3}
       propertyPath: m_Color.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7523794834490052515, guid: 8fc6e0a09b1823a4c926f49eceb5bd7c, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 51
+      objectReference: {fileID: 0}
+    - target: {fileID: 7523794834490052515, guid: 8fc6e0a09b1823a4c926f49eceb5bd7c, type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7523794835066806048, guid: 8fc6e0a09b1823a4c926f49eceb5bd7c, type: 3}
       propertyPath: m_Name
@@ -1131,7 +1167,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 94519654202661832, guid: f5c2701559219334aaceed144ced16ca, type: 3}
       propertyPath: _onGameClear.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 94519654202661832, guid: f5c2701559219334aaceed144ced16ca, type: 3}
       propertyPath: _onGameStart.m_PersistentCalls.m_Calls.Array.size
@@ -1155,6 +1191,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 94519654202661832, guid: f5c2701559219334aaceed144ced16ca, type: 3}
       propertyPath: _onGameClear.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 94519654202661832, guid: f5c2701559219334aaceed144ced16ca, type: 3}
+      propertyPath: _onGameClear.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 94519654202661832, guid: f5c2701559219334aaceed144ced16ca, type: 3}
@@ -1202,6 +1242,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1724739330}
     - target: {fileID: 94519654202661832, guid: f5c2701559219334aaceed144ced16ca, type: 3}
+      propertyPath: _onGameClear.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1352637529}
+    - target: {fileID: 94519654202661832, guid: f5c2701559219334aaceed144ced16ca, type: 3}
       propertyPath: _onGameStart.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1289006515}
@@ -1239,6 +1283,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 94519654202661832, guid: f5c2701559219334aaceed144ced16ca, type: 3}
       propertyPath: _onGameClear.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 94519654202661832, guid: f5c2701559219334aaceed144ced16ca, type: 3}
+      propertyPath: _onGameClear.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 94519654202661832, guid: f5c2701559219334aaceed144ced16ca, type: 3}
@@ -1286,6 +1334,10 @@ PrefabInstance:
       value: SetActive
       objectReference: {fileID: 0}
     - target: {fileID: 94519654202661832, guid: f5c2701559219334aaceed144ced16ca, type: 3}
+      propertyPath: _onGameClear.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 94519654202661832, guid: f5c2701559219334aaceed144ced16ca, type: 3}
       propertyPath: _onGameStart.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SetActive
       objectReference: {fileID: 0}
@@ -1330,6 +1382,10 @@ PrefabInstance:
       value: UnityEngine.GameObject, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 94519654202661832, guid: f5c2701559219334aaceed144ced16ca, type: 3}
+      propertyPath: _onGameClear.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 94519654202661832, guid: f5c2701559219334aaceed144ced16ca, type: 3}
       propertyPath: _onGameStart.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: UnityEngine.GameObject, UnityEngine
       objectReference: {fileID: 0}
@@ -1360,6 +1416,10 @@ PrefabInstance:
     - target: {fileID: 94519654202661832, guid: f5c2701559219334aaceed144ced16ca, type: 3}
       propertyPath: _onGameover.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_BoolArgument
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 94519654202661832, guid: f5c2701559219334aaceed144ced16ca, type: 3}
+      propertyPath: _onGameClear.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 94519654202661832, guid: f5c2701559219334aaceed144ced16ca, type: 3}
       propertyPath: _onGameStart.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_BoolArgument
@@ -1395,6 +1455,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 94519654202661832, guid: f5c2701559219334aaceed144ced16ca, type: 3}
       propertyPath: _onGameClear.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 94519654202661832, guid: f5c2701559219334aaceed144ced16ca, type: 3}
+      propertyPath: _onGameClear.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 94519654202661832, guid: f5c2701559219334aaceed144ced16ca, type: 3}
@@ -1593,6 +1657,18 @@ PrefabInstance:
     - target: {fileID: 6678157051185258498, guid: fc5ccf1635030e84c9427cb3e390dad4, type: 3}
       propertyPath: m_Name
       value: EXEnemyGenerator
+      objectReference: {fileID: 0}
+    - target: {fileID: 6678157051185258499, guid: fc5ccf1635030e84c9427cb3e390dad4, type: 3}
+      propertyPath: _spawnCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6678157051185258499, guid: fc5ccf1635030e84c9427cb3e390dad4, type: 3}
+      propertyPath: _spawnInterval
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 6678157051185258499, guid: fc5ccf1635030e84c9427cb3e390dad4, type: 3}
+      propertyPath: _getFasterIntervalValue
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6678157051185258500, guid: fc5ccf1635030e84c9427cb3e390dad4, type: 3}
       propertyPath: m_RootOrder
