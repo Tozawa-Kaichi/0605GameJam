@@ -16,6 +16,12 @@ public class PlantController : MonoBehaviour
     private Transform _plantTransform = default;
     [SerializeField]
     private ParticleSystem _plantSystem = null;
+    [SerializeField]
+    private ParticleSystem _plantSystem2 = null;
+    [SerializeField]
+    private int _flowerOpen = 10;
+    [SerializeField]
+    private GameObject _flowers = default;
     private int _currentSize = 0;
     private bool _isActive = false;
     private void Update()
@@ -33,9 +39,14 @@ public class PlantController : MonoBehaviour
         {
             _plantTransform.localScale = Vector3.one * _upSizes[_currentSize];
             _currentSize++;
-            if (_currentSize >= _sizeChangePoints.Length)
+            if (_currentSize == _flowerOpen)
             {
                 _plantSystem.Play();
+                _flowers.SetActive(true);
+            }
+            if (_currentSize >= _sizeChangePoints.Length)
+            {
+                _plantSystem2.Play();
                 return;
             }
         }
@@ -48,5 +59,7 @@ public class PlantController : MonoBehaviour
     public void StopControl()
     {
         _isActive = false;
+        _plantSystem.Stop();
+        _plantSystem2.Stop();
     }
 }

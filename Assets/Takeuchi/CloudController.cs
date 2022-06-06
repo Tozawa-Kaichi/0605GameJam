@@ -32,6 +32,8 @@ public class CloudController : MonoBehaviour
     private float _heavyRainSpeed = 0.2f;
     [SerializeField]
     private int _heavyRainPower = 5;
+    [SerializeField]
+    private ParticleSystem _heavyRainParticle = default;
     private int _currentPower = 1;
     private float _thundercloudTimer = 0f;
     private bool _isThundercloudRaining = false;
@@ -60,6 +62,7 @@ public class CloudController : MonoBehaviour
             _isHeavyRaining = true;
             _currentPower = _heavyRainPower;
             ChangeSize();
+            _heavyRainParticle.Play();
             _currentSize -= _heavyRainSpeed * Time.deltaTime;
             CameraShakeController.PlayShake(_shakeRange);
         }
