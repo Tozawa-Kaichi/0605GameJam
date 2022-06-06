@@ -4945,6 +4945,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98b1ea4f33a8f6d4188decd4cd277223, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  death: {fileID: 8300000, guid: 392a496096d673741b1176e26012ed40, type: 3}
   _enemyHealthPoint: 150
   _rainDamage: 5
   _deathDelay: 0.5
