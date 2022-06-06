@@ -9642,6 +9642,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77ce69c9e400c4c499d12a6e5155b79e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audio: {fileID: 8300000, guid: d7b724acc495dee45bf0b889e8a376b2, type: 3}
 --- !u!70 &961443252873982304
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
