@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager Instance { get; private set; }
+    public static GameManager Instance { get; private set; }//インスタンス
     [SerializeField] bool _hideMousecCursor = false;
     [SerializeField] UnityEngine.Events.UnityEvent _onGameStart = null;//ゲーム開始時に呼び出す処理
     [SerializeField] UnityEngine.Events.UnityEvent _onGameover = null;//ゲームクリア時に呼び出す処理
@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     {
         CursorCheck();
         _onGameStart.Invoke();
+        Trigger.trigger = false;
     }
 
     void CursorCheck()
@@ -26,7 +27,9 @@ public class GameManager : MonoBehaviour
     }
     public  void GameOver()
     {
+        //_score =HPBar;
         _onGameover.Invoke();
+
     }
     public void Some(int score)
     {
