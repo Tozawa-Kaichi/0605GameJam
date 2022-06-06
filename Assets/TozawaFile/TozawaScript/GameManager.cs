@@ -4,21 +4,19 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager Instance { get; private set; }
     [SerializeField] bool _hideMousecCursor = false;
     [SerializeField] UnityEngine.Events.UnityEvent _onGameStart = null;//ゲーム開始時に呼び出す処理
     [SerializeField] UnityEngine.Events.UnityEvent _onGameover = null;//ゲームクリア時に呼び出す処理
     int _score = 0;
-    // Start is called before the first frame update
+    private void Awake()
+    {
+        Instance = this;
+    }
     void Start()
     {
         CursorCheck();
         _onGameStart.Invoke();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     void CursorCheck()
