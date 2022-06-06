@@ -9924,6 +9924,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: CountText
       objectReference: {fileID: 0}
+    - target: {fileID: 8420083293522164124, guid: 047a762b2ea7980439468035b97baa11, type: 3}
+      propertyPath: m_Color.b
+      value: 0.47450984
+      objectReference: {fileID: 0}
+    - target: {fileID: 8420083293522164124, guid: 047a762b2ea7980439468035b97baa11, type: 3}
+      propertyPath: m_Color.g
+      value: 0.92261046
+      objectReference: {fileID: 0}
+    - target: {fileID: 8420083293522164124, guid: 047a762b2ea7980439468035b97baa11, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8420083293522164127, guid: 047a762b2ea7980439468035b97baa11, type: 3}
+      propertyPath: m_EffectColor.b
+      value: 0.98659134
+      objectReference: {fileID: 0}
+    - target: {fileID: 8420083293522164127, guid: 047a762b2ea7980439468035b97baa11, type: 3}
+      propertyPath: m_EffectColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8420083293522164127, guid: 047a762b2ea7980439468035b97baa11, type: 3}
+      propertyPath: m_EffectColor.r
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 047a762b2ea7980439468035b97baa11, type: 3}
 --- !u!4 &2608225194220346305 stripped
