@@ -19,8 +19,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         CursorCheck();
-        _onGameStart.Invoke();
-        Trigger.trigger = false;
+        
     }
 
     void CursorCheck()
@@ -28,16 +27,17 @@ public class GameManager : MonoBehaviour
         if (_hideMousecCursor)
         { Cursor.visible = false; }// É}ÉEÉXÇè¡Ç∑
     }
+    public void GameStart()
+    {
+        Trigger.trigger = false;
+        _onGameStart.Invoke();
+    }
     public  void GameOver()
     {
         _score = hpbar.currentHp;
         StartCoroutine(WaitAnimation(_score));
-
     }
-    public void Some(int score)
-    {
-        StartCoroutine(WaitAnimation(score));
-    }
+    
     public  IEnumerator WaitAnimation(int score)
     {
         Debug.Log("Waiting");

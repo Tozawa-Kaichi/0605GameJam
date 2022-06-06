@@ -957,6 +957,22 @@ PrefabInstance:
       propertyPath: hpbar
       value: 
       objectReference: {fileID: 1983360257}
+    - target: {fileID: 94519654202661832, guid: f5c2701559219334aaceed144ced16ca, type: 3}
+      propertyPath: _onGameStart.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 94519654202661832, guid: f5c2701559219334aaceed144ced16ca, type: 3}
+      propertyPath: _onGameStart.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 94519654202661832, guid: f5c2701559219334aaceed144ced16ca, type: 3}
+      propertyPath: _onGameStart.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 94519654202661832, guid: f5c2701559219334aaceed144ced16ca, type: 3}
+      propertyPath: _onGameStart.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 94519654202661833, guid: f5c2701559219334aaceed144ced16ca, type: 3}
       propertyPath: m_Name
       value: GameManager
