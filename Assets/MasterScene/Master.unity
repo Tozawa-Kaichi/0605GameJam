@@ -1317,6 +1317,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1450340069}
     - target: {fileID: 94519654202661832, guid: f5c2701559219334aaceed144ced16ca, type: 3}
+      propertyPath: _restartWaitTime
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 94519654202661832, guid: f5c2701559219334aaceed144ced16ca, type: 3}
       propertyPath: _onGameover.m_PersistentCalls.m_Calls.Array.size
       value: 4
       objectReference: {fileID: 0}
