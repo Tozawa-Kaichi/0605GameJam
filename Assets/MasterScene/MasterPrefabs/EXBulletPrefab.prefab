@@ -4944,7 +4944,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d44ef3ebe072f284a9543453cb393456, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemyHealthPoint: 50
+  _enemyHealthPoint: 100
   _rainDamage: 1
   _deathDelay: 0
   _count: {fileID: 0}

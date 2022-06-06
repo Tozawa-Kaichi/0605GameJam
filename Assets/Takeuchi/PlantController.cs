@@ -22,11 +22,14 @@ public class PlantController : MonoBehaviour
     private int _flowerOpen = 10;
     [SerializeField]
     private GameObject _flowers = default;
+    [SerializeField]
+    private CountText _text = default;
     private int _currentSize = 0;
     private bool _isActive = false;
     private void Update()
     {
         if (!_isActive) { return; }
+        _text.Count = _hPBar.currentHp;
         if (_currentSize > 0 && _plantTransform.localPosition != Vector3.up * _upPos[_currentSize - 1])
         {
             _plantTransform.localPosition = Vector3.Lerp(_plantTransform.localPosition, Vector3.up * _upPos[_currentSize - 1], Time.deltaTime);
