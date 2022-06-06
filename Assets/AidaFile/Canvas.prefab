@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7523794834490052540}
   - component: {fileID: 7523794834490052515}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: Info (Legacy)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -92,8 +92,10 @@ GameObject:
   - component: {fileID: 7523794834672379243}
   - component: {fileID: 7523794834672379242}
   - component: {fileID: 7523794834672379236}
+  - component: {fileID: 1289006516}
+  - component: {fileID: 1289006521}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: GameOverText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -257,6 +259,38 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &1289006516
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7523794834672379240}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 41e7391f722b3fa4d999161540063775, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1289006521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7523794834672379240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8c2eb765c92b5f4482b66f56e792e74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7523794835066806048
 GameObject:
   m_ObjectHideFlags: 0
@@ -373,7 +407,7 @@ GameObject:
   - component: {fileID: 7523794836440783649}
   - component: {fileID: 7523794836440783648}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: GameClearText (Legacy)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
