@@ -24,11 +24,25 @@ public class CloudController : MonoBehaviour
     private float _maxSize = 2f;
     [SerializeField]
     private float _maxSpeed = 12f;
+    [SerializeField]
+    private float _shakeRange = 0.02f;
+    [SerializeField]
+    private float _heavyRainSize = 0.0f;
+    [SerializeField]
+    private float _heavyRainSpeed = 0.2f;
+    [SerializeField]
+    private int _heavyRainPower = 5;
+    private int _currentPower = 1;
     private float _thundercloudTimer = 0f;
     private bool _isThundercloudRaining = false;
     private float _currentSize = 1f;
     private float _currentSpeed = default;
     private Vector2 _moveDir = Vector2.zero;
+    private bool _isHeavyRaining = false;
+    /// <summary>
+    /// 10î{Ç∑ÇÈÇ∆1ïbä‘ÇÃç~âJó 
+    /// </summary>
+    public int RainCount { get => (int)(_rainCount * _currentSize) * _currentPower; }
     private void Start()
     {
         _currentSize = _startSize;
@@ -41,6 +55,20 @@ public class CloudController : MonoBehaviour
         var v = Input.GetAxisRaw("Vertical");
         _moveDir.x = h;
         _moveDir.y = v;
+        if (_currentSize > _startSize + _heavyRainSize && Input.GetButton("Jump"))
+        {
+            _isHeavyRaining = true;
+            _currentPower = _heavyRainPower;
+            ChangeSize();
+            _currentSize -= _heavyRainSpeed * Time.deltaTime;
+            CameraShakeController.PlayShake(_shakeRange);
+        }
+        else if (_isHeavyRaining)
+        {
+            _isHeavyRaining = false;
+            _currentPower = 1;
+            ChangeSize();
+        }
     }
     private void FixedUpdate()
     {
@@ -57,12 +85,13 @@ public class CloudController : MonoBehaviour
         {
             cloudBody.localScale = Vector3.one * _currentSize;
         }
-        _rainCreate.ChangeRainCount((int)(_rainCount * _currentSize));
+        _rainCreate.ChangeRainCount(RainCount);
     }
     private IEnumerator ThundercloudRain()
     {
         while (_thundercloudTimer < _thundercloudTime)
         {
+            CameraShakeController.PlayShake(_shakeRange);
             _thundercloudTimer += Time.deltaTime;
             yield return null;
         }
