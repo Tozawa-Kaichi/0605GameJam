@@ -36,4 +36,8 @@ public class CubeMove : MonoBehaviour
             m_rb.velocity = Vector2.left * _speed;
         }
     }
+    public void StopMove()
+    {
+        m_rb.velocity = Vector2.zero;
+    }
 }

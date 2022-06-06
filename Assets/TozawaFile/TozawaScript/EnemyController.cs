@@ -7,11 +7,17 @@ public class EnemyController : MonoBehaviour
     [SerializeField] public int _enemyHealthPoint = 100; //炎の体力
     [SerializeField] int _rainDamage = 5; // 雨の火力
     [SerializeField] public float _deathDelay = 2f; //火が消えるまでの余韻
+    [SerializeField] protected CountText _count = default;
     ParticleSystem _fireParticle = default; //炎のパーティクル
-    // Start is called before the first frame update
+    [SerializeField]
+    CubeMove _cubeMove = default;
     void Start()
     {
         _fireParticle = GetComponent<ParticleSystem>();
+        if (_count)
+        {
+            _count.Count = _enemyHealthPoint;
+        }
     }
 
     // Update is called once per frame
@@ -28,6 +34,10 @@ public class EnemyController : MonoBehaviour
         if(collision.gameObject.tag == "Rain")//もし当たったオブジェクトのタグがRainだったら
         {
             _enemyHealthPoint -= _rainDamage;//既定のダメージ分体力から減らす
+            if (_count)
+            {
+                _count.Count = _enemyHealthPoint;
+            }
             collision.gameObject.SetActive(false); //当たった雨を消滅させる
         }
         
@@ -35,6 +45,10 @@ public class EnemyController : MonoBehaviour
     protected virtual void UpdateSet() { }//ヴァーチャルメソッド
     public void Extinguished()//消化(体力が０)されたときの処理
     {
+        if (_cubeMove)
+        {
+            _cubeMove.StopMove();
+        }
         _fireParticle.Stop();//パーティクルを停止する
         Destroy(gameObject,_deathDelay);//余韻を残して消滅
     }
