@@ -26,7 +26,11 @@ public class GameManager : MonoBehaviour
         if (_hideMousecCursor)
         { Cursor.visible = false; }// É}ÉEÉXÇè¡Ç∑
     }
-    public void TitleLoad(int score)
+    public  void GameOver()
+    {
+        _onGameover.Invoke();
+    }
+    public void Some(int score)
     {
         StartCoroutine(WaitAnimation(score));
     }
