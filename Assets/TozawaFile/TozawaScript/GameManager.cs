@@ -5,9 +5,10 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
-
+    public CloudController raincount;
     public static GameManager Instance { get; private set; }//インスタンス
     [SerializeField] bool _hideMousecCursor = false;
+    [SerializeField] Text _rainFallText;
     [SerializeField] Text _scoreText;
     [SerializeField] float _restartWaitTime = 1f;
     [SerializeField] UnityEngine.Events.UnityEvent _onGameStart = null;//ゲーム開始時に呼び出す処理
@@ -31,6 +32,7 @@ public class GameManager : MonoBehaviour
             FireCheck.dead = false;
             GameOver();
         }
+        _rainFallText.text = (raincount.RainCount * 100).ToString("D6");
 
     }
 
@@ -68,7 +70,7 @@ public class GameManager : MonoBehaviour
         else if(score > 0)
         {
             _onGameClear.Invoke();
-            _scoreText.text = _score.ToString("D8");
+            _scoreText.text = _score.ToString() + "点！オメデト！";
         }
         yield return new WaitUntil(() => Trigger.trigger);
         //ここにアニメーションが完了してからしてほしいことを書く
