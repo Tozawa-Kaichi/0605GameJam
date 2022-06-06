@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour
             FireCheck.dead = false;
             GameOver();
         }
-        _rainFallText.text = (raincount.RainCount * 100).ToString("D6");
+        _rainFallText.text = "ç~âJó  "+(raincount.RainCount * 100).ToString("D6");
 
     }
 

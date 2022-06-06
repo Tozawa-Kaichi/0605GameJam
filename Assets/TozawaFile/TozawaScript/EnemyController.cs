@@ -35,7 +35,8 @@ public class EnemyController : MonoBehaviour
     {
         if(collision.gameObject.tag == "Rain")//もし当たったオブジェクトのタグがRainだったら
         {
-            death.Play();
+            if (death) { death.Play(); }
+            
             _enemyHealthPoint -= _rainDamage;//既定のダメージ分体力から減らす
             if (_count)
             {
