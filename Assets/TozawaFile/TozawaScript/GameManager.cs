@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
 
@@ -23,6 +24,14 @@ public class GameManager : MonoBehaviour
         CursorCheck();
         GameStart();
     }
+    void Update()
+    {
+        if(FireCheck.dead)
+        {
+            FireCheck.dead = false;
+            GameOver();
+        }
+    }
 
     void CursorCheck()// マウスを消す
     {
@@ -33,6 +42,7 @@ public class GameManager : MonoBehaviour
     {
         Trigger.trigger = false;
         _onGameStart.Invoke();
+        
     }
     public  void GameOver()//失敗時呼ばれる 条件 花炎上
     {
@@ -59,6 +69,10 @@ public class GameManager : MonoBehaviour
         }
         yield return new WaitUntil(() => Trigger.trigger);
         //ここにアニメーションが完了してからしてほしいことを書く
-        Invoke(nameof(GameStart), _restartWaitTime); //自動リスタート
+        Invoke(nameof(LoadScene), _restartWaitTime); //自動リスタート
+    }
+    void LoadScene()
+    {
+        SceneManager.LoadScene(0);
     }
 }

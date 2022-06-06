@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class FireCheck : MonoBehaviour
 {
+    public static bool dead = false;
     [SerializeField]
     private int _maxLife = 1;
     [SerializeField]
@@ -35,5 +36,6 @@ public class FireCheck : MonoBehaviour
     {
         _deadParticle.Play();
         _plantController?.StopControl();
+        dead = true;
     }
 }
