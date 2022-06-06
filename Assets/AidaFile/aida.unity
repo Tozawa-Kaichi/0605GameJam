@@ -300,6 +300,56 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 6.946061, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &1253686552 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7523794836440783654, guid: 8fc6e0a09b1823a4c926f49eceb5bd7c, type: 3}
+  m_PrefabInstance: {fileID: 7523794834459716492}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1253686557
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1253686552}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9dc935ac33532b44195916a1ef3b640a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &1532788320 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7523794834672379240, guid: 8fc6e0a09b1823a4c926f49eceb5bd7c, type: 3}
+  m_PrefabInstance: {fileID: 7523794834459716492}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1532788322
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1532788320}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1cb9f64ec988a0b4f8978a7659a73d96, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1620308743
 GameObject:
   m_ObjectHideFlags: 0
@@ -542,6 +592,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7523794834672379240, guid: 8fc6e0a09b1823a4c926f49eceb5bd7c, type: 3}
+      propertyPath: m_Name
+      value: GameOverText (Legacy)
+      objectReference: {fileID: 0}
     - target: {fileID: 7523794835066806048, guid: 8fc6e0a09b1823a4c926f49eceb5bd7c, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -629,6 +683,18 @@ PrefabInstance:
     - target: {fileID: 7523794835066806076, guid: 8fc6e0a09b1823a4c926f49eceb5bd7c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7523794836440783649, guid: 8fc6e0a09b1823a4c926f49eceb5bd7c, type: 3}
+      propertyPath: m_Color.b
+      value: 0.19607843
+      objectReference: {fileID: 0}
+    - target: {fileID: 7523794836440783649, guid: 8fc6e0a09b1823a4c926f49eceb5bd7c, type: 3}
+      propertyPath: m_Color.g
+      value: 0.19607843
+      objectReference: {fileID: 0}
+    - target: {fileID: 7523794836440783649, guid: 8fc6e0a09b1823a4c926f49eceb5bd7c, type: 3}
+      propertyPath: m_Color.r
+      value: 0.19607843
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8fc6e0a09b1823a4c926f49eceb5bd7c, type: 3}
