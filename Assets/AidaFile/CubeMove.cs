@@ -4,24 +4,36 @@ using UnityEngine;
 
 public class CubeMove : MonoBehaviour
 {
-    [SerializeField] bool _right = true;
+    bool _right = true;
     // Start is called before the first frame update
     Rigidbody2D m_rb = default;
+    [SerializeField] float _speed = 1f;
     void Start()
     {
         m_rb = GetComponent<Rigidbody2D>();
+        RLCheck();
+        Move();
     }
-
-    // Update is called once per frame
-    void Update()
+    void RLCheck()
     {
-        if (_right)
+        if (transform.position.x < 0)
         {
-            m_rb.velocity = Vector2.right;
+            _right = true;
         }
         else
         {
-            m_rb.velocity = Vector2.left;
+            _right = false;
+        }
+    }
+    private void Move()
+    {
+        if (_right)
+        {
+            m_rb.velocity = Vector2.right * _speed;
+        }
+        else
+        {
+            m_rb.velocity = Vector2.left * _speed;
         }
     }
 }
