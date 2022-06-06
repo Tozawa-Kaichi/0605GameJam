@@ -4,6 +4,7 @@ using UnityEngine;
 [RequireComponent(typeof(CapsuleCollider2D))]
 public class EnemyController : MonoBehaviour
 {
+    [SerializeField] AudioSource death;
     [SerializeField] public int _enemyHealthPoint = 100; //炎の体力
     [SerializeField] int _rainDamage = 5; // 雨の火力
     [SerializeField] public float _deathDelay = 2f; //火が消えるまでの余韻
@@ -11,6 +12,7 @@ public class EnemyController : MonoBehaviour
     ParticleSystem _fireParticle = default; //炎のパーティクル
     [SerializeField]
     CubeMove _cubeMove = default;
+
     void Start()
     {
         _fireParticle = GetComponent<ParticleSystem>();
@@ -33,6 +35,7 @@ public class EnemyController : MonoBehaviour
     {
         if(collision.gameObject.tag == "Rain")//もし当たったオブジェクトのタグがRainだったら
         {
+            death.Play();
             _enemyHealthPoint -= _rainDamage;//既定のダメージ分体力から減らす
             if (_count)
             {
