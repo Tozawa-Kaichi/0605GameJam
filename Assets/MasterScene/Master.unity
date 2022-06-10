@@ -1539,6 +1539,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1983360257}
     - target: {fileID: 94519654202661832, guid: f5c2701559219334aaceed144ced16ca, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1326146670}
+    - target: {fileID: 94519654202661832, guid: f5c2701559219334aaceed144ced16ca, type: 3}
       propertyPath: raincount
       value: 
       objectReference: {fileID: 1326146671}

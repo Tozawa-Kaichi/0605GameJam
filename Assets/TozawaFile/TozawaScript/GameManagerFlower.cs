@@ -16,6 +16,7 @@ public class GameManagerFlower : MonoBehaviour
     [SerializeField] UnityEngine.Events.UnityEvent _onGameClear = null;//ゲームオーバー時に呼び出す処理
     /// <summary>ランキングシステムのプレハブ</summary>
     [SerializeField] GameObject m_rankingPrefab;
+    [SerializeField] GameObject player;
     public HPBar hpbar;
     int _score = 0;
     private void Awake()
@@ -60,7 +61,7 @@ public class GameManagerFlower : MonoBehaviour
         _score = hpbar.currentHp;//どれだけ花をのばしたか
         Debug.Log(_score);
         StartCoroutine(WaitAnimation(_score));//をスコアにする
-        
+        Destroy(player);
     }
     
     public  IEnumerator WaitAnimation(int score)
@@ -77,7 +78,7 @@ public class GameManagerFlower : MonoBehaviour
         }
         yield return new WaitForSeconds(3f);
         // ランキングシステムを発動させる
-        var ranking = Instantiate(m_rankingPrefab);
+        var ranking =  Instantiate(m_rankingPrefab);
         ranking.GetComponent<RankingManager>().SetScoreOfCurrentPlay(_score);
         yield return new WaitUntil(() => Trigger.trigger);
         //ここにアニメーションが完了してからしてほしいことを書く
