@@ -12,9 +12,9 @@ public class ClearFlower : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player")
         {
-            if (GameManager.Instance != null)
+            if (GameManagerFlower.Instance != null)
             {
-                GameManager.Instance.GameClear();
+                GameManagerFlower.Instance.GameClear();
             }
             else
             {

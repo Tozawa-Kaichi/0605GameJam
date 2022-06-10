@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-public class GameManager : MonoBehaviour
+public class GameManagerFlower : MonoBehaviour
 {
     public CloudController raincount;
-    public static GameManager Instance { get; private set; }//インスタンス
+    public static GameManagerFlower Instance { get; private set; }//インスタンス
     [SerializeField] bool _hideMousecCursor = false;
     [SerializeField] Text _rainFallText;
     [SerializeField] Text _scoreText;
@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] UnityEngine.Events.UnityEvent _onGameStart = null;//ゲーム開始時に呼び出す処理
     [SerializeField] UnityEngine.Events.UnityEvent _onGameover = null;//ゲームオーバー時に呼び出す処理
     [SerializeField] UnityEngine.Events.UnityEvent _onGameClear = null;//ゲームオーバー時に呼び出す処理
+    /// <summary>ランキングシステムのプレハブ</summary>
+    [SerializeField] GameObject m_rankingPrefab;
     public HPBar hpbar;
     int _score = 0;
     private void Awake()
@@ -58,6 +60,7 @@ public class GameManager : MonoBehaviour
         _score = hpbar.currentHp;//どれだけ花をのばしたか
         Debug.Log(_score);
         StartCoroutine(WaitAnimation(_score));//をスコアにする
+        
     }
     
     public  IEnumerator WaitAnimation(int score)
@@ -72,6 +75,10 @@ public class GameManager : MonoBehaviour
             _onGameClear.Invoke();
             _scoreText.text = _score.ToString() + "点！オメデト！";
         }
+        yield return new WaitForSeconds(3f);
+        // ランキングシステムを発動させる
+        var ranking = Instantiate(m_rankingPrefab);
+        ranking.GetComponent<RankingManager>().SetScoreOfCurrentPlay(_score);
         yield return new WaitUntil(() => Trigger.trigger);
         //ここにアニメーションが完了してからしてほしいことを書く
         Invoke(nameof(LoadScene), _restartWaitTime); //自動リスタート
