@@ -46,7 +46,7 @@ public class GameManagerFlower : MonoBehaviour
     }
     public void GameStart()//ゲーム開始・リスタート時に呼ばれる関数
     {
-        Trigger.trigger = false;
+        //Trigger.trigger = false;
         _onGameStart.Invoke();
         
     }
@@ -61,7 +61,6 @@ public class GameManagerFlower : MonoBehaviour
         _score = hpbar.currentHp;//どれだけ花をのばしたか
         Debug.Log(_score);
         StartCoroutine(WaitAnimation(_score));//をスコアにする
-        Destroy(player);
     }
     
     public  IEnumerator WaitAnimation(int score)
@@ -80,11 +79,11 @@ public class GameManagerFlower : MonoBehaviour
         // ランキングシステムを発動させる
         var ranking =  Instantiate(m_rankingPrefab);
         ranking.GetComponent<RankingManager>().SetScoreOfCurrentPlay(_score);
-        yield return new WaitUntil(() => Trigger.trigger);
-        //ここにアニメーションが完了してからしてほしいことを書く
-        Invoke(nameof(LoadScene), _restartWaitTime); //自動リスタート
+        //yield return new WaitUntil(() =>  );
+        ////ここにアニメーションが完了してからしてほしいことを書く
+        //Invoke(nameof(LoadScene), _restartWaitTime); //自動リスタート
     }
-    void LoadScene()
+    public static void LoadScene()
     {
         SceneManager.LoadScene(0);
     }

@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class Trigger : MonoBehaviour
 {
-    public static bool trigger = false;
+    //public static bool trigger = false;
 
-    public void Triggers()
-    {
-        trigger = true;
-    }
+    //public void Triggers()
+    //{
+    //    trigger = true;
+    //}
 }
