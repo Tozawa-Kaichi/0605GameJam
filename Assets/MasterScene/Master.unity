@@ -1568,7 +1568,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 94519654202661832, guid: f5c2701559219334aaceed144ced16ca, type: 3}
       propertyPath: _onGameClear.m_PersistentCalls.m_Calls.Array.size
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 94519654202661832, guid: f5c2701559219334aaceed144ced16ca, type: 3}
       propertyPath: _onGameStart.m_PersistentCalls.m_Calls.Array.size

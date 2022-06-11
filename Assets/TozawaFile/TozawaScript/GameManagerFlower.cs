@@ -16,7 +16,7 @@ public class GameManagerFlower : MonoBehaviour
     [SerializeField] UnityEngine.Events.UnityEvent _onGameClear = null;//ゲームオーバー時に呼び出す処理
     /// <summary>ランキングシステムのプレハブ</summary>
     [SerializeField] GameObject m_rankingPrefab;
-    [SerializeField] GameObject player;
+    //[SerializeField] GameObject player;
     public HPBar hpbar;
     int _score = 0;
     private void Awake()
@@ -83,8 +83,9 @@ public class GameManagerFlower : MonoBehaviour
         ////ここにアニメーションが完了してからしてほしいことを書く
         //Invoke(nameof(LoadScene), _restartWaitTime); //自動リスタート
     }
-    public static void LoadScene()
+    public static string LoadScene()
     {
         SceneManager.LoadScene(0);
+        return "";
     }
 }

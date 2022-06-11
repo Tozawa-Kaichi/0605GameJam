@@ -134,7 +134,7 @@ public class RankingManager : MonoBehaviour
                 // 正常終了したら、エントリー画面を消してランキングをリロードする
                 m_entryPanel.gameObject.SetActive(false);   // エントリー画面を消す
                 GetRanking(0);  // ランキングをリロードする
-                GameManagerFlower.LoadScene();
+                Invoke( GameManagerFlower.LoadScene(),6);
             }
         });
     }
